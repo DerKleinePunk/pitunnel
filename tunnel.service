@@ -4,6 +4,8 @@ Requires=systemd-networkd-wait-online.service
 After=systemd-networkd-wait-online.service
 
 [Service]
+StandardOutput=journal
+StandardError=journal+console
 ExecStart=/root/tunnel.sh
 RestartSec=5s
 Restart=always
